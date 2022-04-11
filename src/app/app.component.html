@@ -1,29 +1,24 @@
+<input type="text" [(ngModel)]="myVal">
+
+{{myVal}}
+
+<!-- let i=index;let isFirst=first; let isLast=last -->
 <ul>
-    <li *ngFor="let user of users">
-        {{user.name}}
-        <button>Show Details</button>
+    <li *ngFor="let user of users;let i=index;let isFirst=first;">
+        <span [ngClass]="isFirst? 'first-item': ''">{{user.name}}</span>
+        <button [title]="user.name" (click)="onUserClick(i)">Show Details</button>
     </li>
 </ul>
 
-<div>
+<!-- ngModel -->
+
+<!-- [] -> passing data to element
+output () -> getting info from element - events -->
+
+<div *ngIf="selectedUser">
     <h2>Selected User</h2>
-    <h3>Name: Vijay</h3>
-    <h4>Age: 10</h4>
+    <h3>Name: {{selectedUser.name}}</h3>
+    <h4>Age: {{selectedUser.age}}</h4>
 </div>
 
-<!--
-<app-slideshow></app-slideshow>
-<app-my-button></app-my-button>
-
-
- <h1>Hello Angular</h1>
-<h2>{{title}}</h2>
-
-<button (click)="onClick($event, 'abc')">Click me</button>
-
-<input 
-    type="text" 
-    (keyup)="onCustomMethod($event, title)">
-
- -->
-
+<div class="my-div">This is my div</div>

@@ -12,4 +12,6 @@ export class SlideshowComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
 }
