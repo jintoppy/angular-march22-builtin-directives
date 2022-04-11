@@ -1,8 +1,8 @@
 <label for="name">Name:</label>
-<input type="text" id="name">
+<input type="text" id="name" [(ngModel)]="newName">
 <label for="age">Age:</label>
-<input type="text" id="age">
-<button>Add</button>
+<input type="number" id="age" [(ngModel)]="newAge">
+<button (click)="onAdd()" >Add</button>
 
 <!-- let i=index;let isFirst=first; let isLast=last -->
 <ul>
