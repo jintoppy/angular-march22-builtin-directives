@@ -4,6 +4,16 @@
 <input type="number" id="age" [(ngModel)]="newAge">
 <button (click)="onAdd()" >Add</button>
 
+<!-- <ul class="messages">
+    <li class="error">Number not allowed in name</li>
+    <li class="error">Age can't be less than 1</li>
+</ul> -->
+
+<!-- <ul class="messages">
+    <li class="success">Name is valid</li>
+    <li class="success">Age is valid</li>
+</ul> -->
+
 <!-- let i=index;let isFirst=first; let isLast=last -->
 <ul>
     <li *ngFor="let user of users;let i=index;let isFirst=first;">
